@@ -18,12 +18,8 @@ class Todo(db.Model):
 def home():
     return render_template('landing.html')    
 
-@app.route('/Assignments/')
-def task_master():
-    return render_template('Assignments/index.html')
 
-
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/Assignments/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
         task_content = request.form['content']
